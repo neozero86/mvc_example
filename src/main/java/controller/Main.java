@@ -1,14 +1,15 @@
 package controller;
 
-import model.RandomGenerator;
-import view.RandomGeneratorView;
+import model.Chronometer;
+import view.ChronometerView;
 
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
-		RandomGenerator model = new RandomGenerator();
-		RandomGeneratorView view = new RandomGeneratorView(model);
-		new Controller(model, view);
+		Chronometer model = new Chronometer();
+		ChronometerView view = new ChronometerView(model);
+		Controller controller = new Controller(model, view);
+		controller.run();
 	}
 
 }

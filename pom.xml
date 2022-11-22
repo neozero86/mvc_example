@@ -41,9 +41,9 @@
                 <version>2.5</version>
                 <configuration>
                     <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
-                    <compilerVersion>8</compilerVersion>
-                    <source>8</source>
-                    <target>8</target>
+                    <compilerVersion>11</compilerVersion>
+                    <source>11</source>
+                    <target></target>
                 </configuration>
             </plugin>
 
