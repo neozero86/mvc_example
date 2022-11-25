@@ -18,7 +18,7 @@ public class Controller {
 
 		while(true) {
 			model.update();
-			TimeUnit.SECONDS.sleep(1);
+			TimeUnit.MILLISECONDS.sleep(model.getSleepyTime());
 		}
 	}
 
