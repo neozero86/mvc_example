@@ -11,7 +11,8 @@ public class FastState extends State {
 	@Override
 	public void increaseState() {
 		generator.changeState(new SuperFastState(generator));
-
 	}
+	
+	
 
 }
