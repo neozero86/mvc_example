@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-public class test {
+public class test1Test {
 	
 	@Test
 	public void testFuncionando(){
