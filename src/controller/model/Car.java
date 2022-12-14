@@ -11,7 +11,7 @@ public class Car extends Observable{
     private Integer height = 100;
     private Integer VELOCITY = 2;
     
-	public void move(Direction direction) {
+	public void move(Directions direction) {
 		switch (direction) {
 		case LEFT:
 	        x = x - VELOCITY;
