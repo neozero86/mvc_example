@@ -5,11 +5,11 @@ import java.awt.Graphics;
 import java.util.Observable;
 
 public class Car extends Observable{
-    private Integer x = 225;
-    private Integer y = 220;
-    private Integer width = 50;
-    private Integer height = 100;
-    private Integer VELOCITY = 2;
+    private int x = 225;
+    private int y = 220;
+    private int width = 50;
+    private int height = 100;
+    private int VELOCITY = 2;
     
 	public void move(Directions direction) {
 		switch (direction) {
@@ -38,19 +38,19 @@ public class Car extends Observable{
 		notifyObservers();		
 	}
 
-	public Integer getX() {
+	public int getX() {
 		return x;
 	}
 	
-	public Integer getY() {
+	public int getY() {
 		return y;
 	}
 
-	public Integer getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
-	public Integer getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
