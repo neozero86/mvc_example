@@ -43,7 +43,7 @@
                     <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
                     <compilerVersion>11</compilerVersion>
                     <source>11</source>
-                    <target></target>
+                    <target>11</target>
                 </configuration>
             </plugin>
 
