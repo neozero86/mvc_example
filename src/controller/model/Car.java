@@ -4,33 +4,43 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Observable;
 
-public class Car extends Observable{
+import model.directions.Direction;
+
+public class Car extends Observable implements Movable{
     private Integer x = 225;
     private Integer y = 220;
     private Integer width = 50;
     private Integer height = 100;
-    private Integer VELOCITY = 2;
+    private Integer MOVIMENT_UNIT = 2;
     
-	public void move(Directions direction) {
-		switch (direction) {
-		case LEFT:
-	        x = x - VELOCITY;
-			break;
-		case UP:
-	        y = y - VELOCITY;
-			break;
-		case RIGHT:
-	        x = x + VELOCITY;
-			break;
-		case DOWN:
-	        y = y + VELOCITY;
-			break;
+	public void move(Direction direction) {
+        direction.apply(this);
+	}
+	
+	@Override
+	public void increaseX() {
+        x = x + MOVIMENT_UNIT;
+        updated();
+	}
 
-		default:
-			break;
-		}
-		updated();
 
+	@Override
+	public void decreaseY() {
+        y = y - MOVIMENT_UNIT;
+        updated();
+	}
+
+
+	@Override
+	public void increaseY() {
+        y = y + MOVIMENT_UNIT;
+        updated();
+	}
+
+
+	public void decreaseX() {
+        x = x - MOVIMENT_UNIT;
+        updated();
 	}
 	
 	private void updated() {

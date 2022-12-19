@@ -7,14 +7,18 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import model.Car;
-import model.Directions;
+import model.directions.Direction;
+import model.directions.Down;
+import model.directions.Left;
+import model.directions.Right;
+import model.directions.Up;
 import view.Window;
 
 public class Controller implements KeyListener{
 
 	private final Window window;
 	private final Car car;
-	private Map<Integer,Directions> directions = new HashMap<Integer,Directions>();
+	private Map<Integer,Direction> directions = new HashMap<Integer,Direction>();
 	
 	public Controller(Car car, Window window) {
 		fillDirections();
@@ -27,10 +31,10 @@ public class Controller implements KeyListener{
 	}
 
 	private void fillDirections() {
-		directions.put(KeyEvent.VK_LEFT, Directions.LEFT);
-		directions.put(KeyEvent.VK_RIGHT, Directions.RIGHT);
-		directions.put(KeyEvent.VK_UP, Directions.UP);
-		directions.put(KeyEvent.VK_DOWN, Directions.DOWN);
+		directions.put(KeyEvent.VK_LEFT, new Left());
+		directions.put(KeyEvent.VK_RIGHT, new Right());
+		directions.put(KeyEvent.VK_UP, new Up());
+		directions.put(KeyEvent.VK_DOWN, new Down());
 	}
 
 	@Override
